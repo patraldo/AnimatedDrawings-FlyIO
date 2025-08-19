@@ -277,6 +277,8 @@ render.start('./examples/config/mvc/four_legs_example.yaml')
 
 <img src='https://user-images.githubusercontent.com/6675724/223585033-f11e4e66-0443-405a-80e5-09b6aa0e335d.png' height="256" /><img src='https://user-images.githubusercontent.com/6675724/223585043-7ce9eac0-bb4c-4547-b038-c63ca2852ef2.gif' width="256" height="256" /></br></br></br>
 
+If you're interested in animating quadrupeds specifically, you may want to check out [the quadruped example directory](examples/quadruped).
+
 ### Creating Your Own Config Files
 If you want to create your own config files, see the [configuration file documentation](examples/config/README.md).
 
