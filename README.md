@@ -333,7 +333,7 @@ If you have feedback about the dataset, please fill out [this form](https://form
 
 ## ChildlikeSHAPES
 
-If you want this, construct the full archive from the chunks in the release page
+If you want this data set, construct the full archive from the chunks in the release page
 ````cat datachunk_* > full_archive.7z  #(pw=An1m8dR3610Ns)````
 
 
