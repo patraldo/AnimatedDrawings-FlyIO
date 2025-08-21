@@ -9,7 +9,9 @@ view:
   DRAW_AD_TXTR: True
   DRAW_AD_COLOR: False
   DRAW_AD_MESH_LINES: False
-  USE_MESA: False
+  USE_MESA: TRUE 
+  SHOW_ANIMATION_WINDOW: False
+  CAPTURE_VIDEO_FRAMES: True
   CAMERA_POS: [0.0, 0.7, 2.0]
   CAMERA_FWD: [0.0, 0.5, 2.0]
 controller:
