@@ -1,22 +1,39 @@
-# fly.toml app configuration file generated for animated-drawings-patraldo on 2025-08-21T15:49:46-06:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'animated-drawings-patraldo'
-primary_region = 'qro'
+# fly.toml
+app = "animated-drawings-patraldo"
+primary_region = "qro"
 
 [build]
+  dockerfile = "torchserve/Dockerfile"
 
 [http_service]
-  internal_port = 8000
+  internal_port = 8080
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = "stop" 
   auto_start_machines = true
   min_machines_running = 0
-  processes = ['app']
+  processes = ["app"]
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "60s"
+    method = "GET"
+    path = "/ping"
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 200
+    hard_limit = 250
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
+  cpu_kind = "performance"
   cpus = 1
+  memory = "4gb"
+
+[deploy]
+  strategy = "rolling"
+  wait_timeout = "10m"
+  release_command = "sleep 90"
+
+kill_signal = "SIGTERM"
+kill_timeout = 30

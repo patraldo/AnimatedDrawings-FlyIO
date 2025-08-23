@@ -1,26 +1,29 @@
-# ignore auto-generated files
+# Ignore auto-generated files
 **/.DS_Store
 **/__pycache__
 **/src.egg-info
 animated_drawings.egg-info
 
-# for the fixer app at examples/fixer_app
+# For the fixer app
 .parcel-cache/
 node_modules
 
-# ignore the .mar files
+# Ignore .mar files
 **/*.mar
 
-# ignore any vscode specific setting files
+# Ignore IDE settings
 .vscode
 
-# ignore any files created by following examples
+# Ignore example outputs
 **/log.txt
 examples/garlic_out
 **/*.mp4
 **/*.gif
 
-# DO include .gifs used by the Readme
+# But include media gifs
 !media/*.gif
 
-torchserve/logs/
+# Ignore large files
+test.zip
+*.pt
+*.tar.gz
