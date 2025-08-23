@@ -20,6 +20,9 @@ examples/garlic_out
 **/*.mp4
 **/*.gif
 
+# Ignore production outputs
+sftp-downloads/
+
 # But include media gifs
 !media/*.gif
 
