@@ -116,4 +116,4 @@ RUN mkdir -p /tmp/pose_mar && \
     cp /tmp/pose_mar/mmpose_handler.py /usr/local/lib/python3.8/site-packages/ts/torch_handler/mmpose_handler.py
 
 # Start TorchServe
-CMD ["sh", "-c", "torchserve --start --disable-token-auth --ts-config /home/torchserve/config.properties --foreground"]
+CMD ["sh", "-c", "mkdir -p /data/uploads /data/output /data/logs && torchserve --start --disable-token-auth --ts-config /home/torchserve/config.properties --foreground"]
